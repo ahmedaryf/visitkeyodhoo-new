@@ -5,18 +5,23 @@ import React from "react";
 
 export default function AboutusHome({ aboutus }: { aboutus: any }) {
   return (
-    <div className=' dark:bg-zinc-700 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 pb-12'>
-      <div className='bg-amber-100'>
+    <div className=' grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 pb-12'>
+      <div className=''>
         <Image
           src={urlFor(aboutus[0].coverImage)}
           width={600}
           height={600}
           alt='Image'
-          className='rounded aspect-video object-cover w-full'
+          className='rounded-lg aspect-video object-cover w-full'
         />
       </div>
-      <div className='prose dark:prose-invert body-font max-w-none text-sm lg:text-base w-full'>
-        <PortableText value={aboutus[0].shortDescription} />
+      <div>
+        <h2 className='body-font text-2xl lg:text-4xl mb-2 lg:mb-4'>
+          {aboutus[0].title}
+        </h2>
+        <div className='prose dark:prose-invert text-justify body-font max-w-none text-sm lg:text-base w-full'>
+          <PortableText value={aboutus[0].shortDescription} />
+        </div>
       </div>
     </div>
   );

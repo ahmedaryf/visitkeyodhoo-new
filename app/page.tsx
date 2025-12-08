@@ -8,6 +8,7 @@ import { urlFor } from "@/sanity/lib/image";
 import AboutusHome from "./components/AboutusHome";
 import Motion from "./components/Motion";
 import Guesthouses from "./components/Guesthouses";
+import Cafe from "./components/Cafe";
 
 async function getHeroData() {
   const query = `*[_type == "hero"]{
@@ -40,17 +41,22 @@ export default async function Home() {
   const aboutus = await getAboutusData();
 
   return (
-    <div>
+    <div className='dark:bg-black'>
       <HeroSection data={heroData} />
-      <main className='min-h-screen px-6 md:px-12 dark:bg-white/15 lg:py-24  w-full md:w-[90vw] xl:w-[80vw] mx-auto'>
+      <main className='min-h-screen px-6 md:px-12 dark:bg-white/10 lg:py-24  w-full md:w-[90vw] xl:w-[80vw] mx-auto my-12'>
         <div>
           <Motion>
             <AboutusHome aboutus={aboutus} />
           </Motion>
         </div>
-        <div>
+        <div className='mt-12 lg:mt-24'>
           <Motion>
             <Guesthouses />
+          </Motion>
+        </div>
+        <div className='mt-12 lg:mt-24'>
+          <Motion>
+            <Cafe />
           </Motion>
         </div>
         <div className='mb-24'>

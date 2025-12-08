@@ -13,7 +13,7 @@ export default async function Guesthouses() {
   const guesthousesData = await getGuesthouses();
   return (
     <div className='min-h-screen'>
-      <h2 className='text-2xl lg:text-4xl body-font text-center font-bold'>
+      <h2 className='text-2xl lg:text-4xl body-font text-center'>
         Guesthouses
       </h2>
       <div className='mt-12 grid grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-12 '>
