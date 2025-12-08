@@ -5,6 +5,9 @@ import Accordions from "./components/Accordions";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
+import AboutusHome from "./components/AboutusHome";
+import Motion from "./components/Motion";
+import Guesthouses from "./components/Guesthouses";
 
 async function getHeroData() {
   const query = `*[_type == "hero"]{
@@ -40,22 +43,20 @@ export default async function Home() {
     <div>
       <HeroSection data={heroData} />
       <main className='min-h-screen px-6 md:px-12 dark:bg-white/15 lg:py-24  w-full md:w-[90vw] xl:w-[80vw] mx-auto'>
-        <div className=' dark:bg-zinc-700 grid grid-cols-1 lg:grid-cols-2 gap-6 pb-12'>
-          <div>
-            <Image
-              src={urlFor(aboutus[0].coverImage)}
-              width={600}
-              height={600}
-              alt='Image'
-              className='rounded aspect-video object-cover'
-            />
-          </div>
-          <div className='prose dark:prose-invert body-font max-w-none text-sm lg:text-base w-full'>
-            <PortableText value={aboutus[0].shortDescription} />
-          </div>
+        <div>
+          <Motion>
+            <AboutusHome aboutus={aboutus} />
+          </Motion>
+        </div>
+        <div>
+          <Motion>
+            <Guesthouses />
+          </Motion>
         </div>
         <div className='mb-24'>
-          <Accordions data={accordionData} />
+          <Motion>
+            <Accordions data={accordionData} />
+          </Motion>
         </div>
       </main>
     </div>

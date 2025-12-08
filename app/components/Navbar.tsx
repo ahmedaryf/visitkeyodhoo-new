@@ -17,10 +17,7 @@ const navLinks = [
     name: "Travel Guide",
     url: "/travelguide",
   },
-  {
-    name: "Activities",
-    url: "/activities",
-  },
+
   {
     name: "About Us",
     url: "/aboutus",
