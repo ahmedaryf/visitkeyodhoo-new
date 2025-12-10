@@ -12,6 +12,7 @@ async function getCafeData() {
 
 export default async function Cafe() {
   const cafeData = await getCafeData();
+
   return (
     <div className='min-h-screen'>
       <h2 className='text-2xl lg:text-4xl body-font text-center mb-6 lg:mb-12'>
@@ -37,7 +38,15 @@ export default async function Cafe() {
               </h6>
             </div>
             <div className='flex p-4 justify-center'>
-              <MenuComponent />
+              <MenuComponent>
+                <div className='flex flex-col gap-6 items-center'>
+                  {cafe.menu.map((menuItem: any, index: number) => (
+                    <div key={index}>
+                      <h6 className='body-font text-xl'>{menuItem.category}</h6>
+                    </div>
+                  ))}
+                </div>
+              </MenuComponent>
             </div>
           </div>
         ))}

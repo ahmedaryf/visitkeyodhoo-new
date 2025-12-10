@@ -27,25 +27,48 @@ export const cafe = defineType({
           type: "object",
           fields: [
             defineField({
-              name: "itemName",
-              title: "Item Name",
+              name: "category",
+              title: "Category",
               type: "string",
+            }),
+            defineField({
+              name: "id",
+              title: "ID",
+              type: "number",
               validation: (Rule) => Rule.required(),
             }),
             defineField({
-              name: "description",
-              title: "Description",
-              type: "string",
-            }),
-            defineField({
-              name: "price",
-              title: "Price",
-              type: "number",
-            }),
-            defineField({
-              name: "image",
-              title: "Image",
-              type: "image",
+              name: "items",
+              title: "Title",
+              type: "array",
+              of: [
+                {
+                  type: "object",
+                  fields: [
+                    defineField({
+                      name: "itemName",
+                      title: "Item Name",
+                      type: "string",
+                      validation: (Rule) => Rule.required(),
+                    }),
+                    defineField({
+                      name: "description",
+                      title: "Description",
+                      type: "string",
+                    }),
+                    defineField({
+                      name: "price",
+                      title: "Price",
+                      type: "number",
+                    }),
+                    defineField({
+                      name: "image",
+                      title: "Image",
+                      type: "image",
+                    }),
+                  ],
+                },
+              ],
             }),
           ],
         },

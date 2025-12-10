@@ -8,9 +8,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import React from "react";
+import React, { ReactNode } from "react";
 
-export default function MenuComponent() {
+export default function MenuComponent({ children }: { children: ReactNode }) {
   return (
     <div className=' w-full'>
       <Dialog>
@@ -22,12 +22,19 @@ export default function MenuComponent() {
         <DialogContent>
           <DialogHeader>
             <DialogTitle>
-              <p>Menu</p>
+              <p className='text-center body-font text-2xl'>Menu</p>
             </DialogTitle>
           </DialogHeader>
-          <div className=''>
-            <h6>This is the Menu items</h6>
-          </div>
+          {/* <div className='flex flex-col gap-6 items-center'>
+            {menuData.map((item: any) =>
+              item.menu.map((menuItems: any, index: number) => (
+                <div key={index}>
+                  <h6 className='body-font text-xl'>{menuItems.category}</h6>
+                </div>
+              ))
+            )}
+          </div> */}
+          {children}
           <DialogFooter>
             <DialogClose asChild>
               <Button variant='outline' className='cursor-pointer'>
