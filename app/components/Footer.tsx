@@ -24,13 +24,10 @@ export default async function Footer() {
     <footer className='min-h-[60vh] w-screen bg-primary dark:bg-black/70 text-white dark:text-secondary-foreground duration-500 dark:border-t border-white  flex flex-col justify-between py-6 '>
       <div className=' md:flex justify-between items-start px-10 w-full xl:w-[80vw] mx-auto mt-12'>
         <div className='flex md:hidden gap-6 justify-center items-center'>
-          <Link href={"https://www.facebook.com/KeyodhooSchool"}>
+          <Link href={"https://www.facebook.com/vaavukeyodhoo"}>
             <AiFillFacebook size={32} />
           </Link>
-          <Link
-            href={
-              "https://www.instagram.com/keyodhooschool/?igshid=YmMyMTA2M2Y%3D"
-            }>
+          <Link href={"https://www.instagram.com/visitkeyodhoo/"}>
             <AiFillInstagram size={32} />
           </Link>
         </div>
@@ -39,7 +36,7 @@ export default async function Footer() {
             Contact us
           </h1>
           <div className='flex flex-col gap-2'>
-            <div className='flex gap-2 items-center mb-2'>
+            {/* <div className='flex gap-2 items-center mb-2'>
               <FaPhone size={20} />
               <Link href={"tel:+9606700804"}>
                 <p className='text-xs md:text-sm'>Phone: +960 </p>
@@ -50,26 +47,23 @@ export default async function Footer() {
               <Link href={"tel:"}>
                 <p className='text-xs md:text-sm'>Email:</p>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
 
         <div className='hidden md:flex gap-4 justify-center items-center'>
-          <Link href={"https://www.facebook.com/KeyodhooSchool"}>
+          <Link href={"https://www.facebook.com/vaavukeyodhoo"}>
             <AiFillFacebook size={32} />
           </Link>
-          <Link
-            href={
-              "https://www.instagram.com/keyodhooschool/?igshid=YmMyMTA2M2Y%3D"
-            }>
+          <Link href={"https://www.instagram.com/visitkeyodhoo/"}>
             <AiFillInstagram size={32} />
           </Link>
         </div>
 
         <div className='mt-12 md:mt-0 mb-24 md:mb-0'>
-          <h1 className='text-xl font-bold mb-2 md:mb-4 tracking-wider'>
+          {/* <h1 className='text-xl font-bold mb-2 md:mb-4 tracking-wider'>
             Quick Links
-          </h1>
+          </h1> */}
           <div>
             {" "}
             {links &&

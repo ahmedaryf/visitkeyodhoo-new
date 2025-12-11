@@ -15,30 +15,24 @@ export default function MenuComponent({ children }: { children: ReactNode }) {
     <div className=' w-full'>
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant='outline' className='cursor-pointer w-full body-font'>
+          <Button
+            variant='outline'
+            className='cursor-pointer w-full body-font text-sm'>
             View Menu
           </Button>
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>
             <DialogTitle>
-              <p className='text-center body-font text-2xl'>Menu</p>
+              <p className='text-center body-font text-2xl'></p>
             </DialogTitle>
           </DialogHeader>
-          {/* <div className='flex flex-col gap-6 items-center'>
-            {menuData.map((item: any) =>
-              item.menu.map((menuItems: any, index: number) => (
-                <div key={index}>
-                  <h6 className='body-font text-xl'>{menuItems.category}</h6>
-                </div>
-              ))
-            )}
-          </div> */}
-          {children}
+
+          <div className='max-h-[70vh] overflow-y-auto pr-2'>{children}</div>
           <DialogFooter>
             <DialogClose asChild>
               <Button variant='outline' className='cursor-pointer'>
-                Cancel
+                Close
               </Button>
             </DialogClose>
           </DialogFooter>

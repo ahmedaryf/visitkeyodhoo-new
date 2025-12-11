@@ -18,10 +18,10 @@ const navLinks = [
     url: "/travelguide",
   },
 
-  {
-    name: "About Us",
-    url: "/aboutus",
-  },
+  // {
+  //   name: "About Us",
+  //   url: "/aboutus",
+  // },
 ];
 
 const containerVars = {

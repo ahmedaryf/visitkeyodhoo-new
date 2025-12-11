@@ -12,12 +12,19 @@ export const cafe = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "propId",
+      title: "ID",
+      type: "number",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: "coverImage",
       title: "Cover Image",
       type: "image",
       options: { hotspot: true },
       validation: (Rule) => Rule.required(),
     }),
+
     defineField({
       name: "menu",
       title: "Menu",
@@ -31,12 +38,7 @@ export const cafe = defineType({
               title: "Category",
               type: "string",
             }),
-            defineField({
-              name: "id",
-              title: "ID",
-              type: "number",
-              validation: (Rule) => Rule.required(),
-            }),
+
             defineField({
               name: "items",
               title: "Title",
