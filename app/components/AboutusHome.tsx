@@ -16,10 +16,10 @@ export default function AboutusHome({ aboutus }: { aboutus: any }) {
         />
       </div>
       <div>
-        <h2 className='body-font text-2xl lg:text-4xl mb-2 lg:mb-4'>
+        <h2 className='body-font text-2xl lg:text-4xl mb-2 lg:mb-4 text-zinc-500 dark:text-zinc-300'>
           {aboutus[0].title}
         </h2>
-        <div className='prose dark:prose-invert text-justify body-font max-w-none text-sm lg:text-base w-full'>
+        <div className='prose dark:prose-invert text-justify body-font max-w-none text-sm lg:text-base w-full text-zinc-500 dark:text-zinc-300'>
           <PortableText value={aboutus[0].shortDescription} />
         </div>
       </div>

@@ -20,7 +20,7 @@ export default async function Cafe() {
 
   return (
     <div className='min-h-screen'>
-      <h2 className='text-2xl lg:text-4xl body-font text-center mb-6 lg:mb-12'>
+      <h2 className='text-2xl lg:text-4xl body-font text-center mb-6 lg:mb-12 text-zinc-500 dark:text-zinc-300'>
         Café & Restaurants
       </h2>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12'>
@@ -43,17 +43,17 @@ export default async function Cafe() {
                     )}
                   </div>
                   <div className='px-2 lg:px-4 pb-6'>
-                    <h6 className='text-base  body-font text-center mt-4'>
+                    <h6 className='text-base  body-font text-center mt-4 text-zinc-500 dark:text-zinc-300'>
                       {cafe.title}
                     </h6>
                   </div>
                   <div className='flex p-4 justify-center'>
                     {cafe.menu && (
                       <MenuComponent>
-                        <h5 className='text-center body-font text-lg'>
+                        <h5 className='text-center body-font text-lg text-zinc-500 dark:text-zinc-300'>
                           {cafe.title}
                         </h5>
-                        <h6 className='text-center body-font text-lg mb-6'>
+                        <h6 className='text-center body-font text-lg mb-6 text-zinc-500 dark:text-zinc-300'>
                           Menu
                         </h6>
                         <div className='flex flex-col gap-8 pb-12'>

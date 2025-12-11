@@ -35,7 +35,15 @@
   color: white;
 }
 .prose strong {
-  color: black;
+  color: gray;
+}
+.prose :where(h4):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: gray;
+}
+.dark
+  .prose
+  :where(h4):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: white;
 }
 
 .ReactCollapse--collapse {

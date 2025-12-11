@@ -17,7 +17,7 @@ export default function MenuComponent({ children }: { children: ReactNode }) {
         <DialogTrigger asChild>
           <Button
             variant='outline'
-            className='cursor-pointer w-full body-font text-sm'>
+            className='cursor-pointer w-full body-font text-sm text-zinc-500 dark:text-zinc-300'>
             View Menu
           </Button>
         </DialogTrigger>
@@ -31,7 +31,9 @@ export default function MenuComponent({ children }: { children: ReactNode }) {
           <div className='max-h-[70vh] overflow-y-auto pr-2'>{children}</div>
           <DialogFooter>
             <DialogClose asChild>
-              <Button variant='outline' className='cursor-pointer'>
+              <Button
+                variant='outline'
+                className='cursor-pointer text-zinc-500 dark:text-zinc-300'>
                 Close
               </Button>
             </DialogClose>

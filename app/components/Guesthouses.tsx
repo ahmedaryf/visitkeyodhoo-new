@@ -12,7 +12,7 @@ export default async function Guesthouses() {
   const guesthousesData = await getGuesthouses();
   return (
     <div className='min-h-screen'>
-      <h2 className='text-2xl lg:text-4xl body-font text-center'>
+      <h2 className='text-2xl lg:text-4xl body-font text-center text-zinc-500 dark:text-zinc-300'>
         Guesthouses
       </h2>
       <div className='mt-12 grid grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-12 '>
@@ -30,10 +30,12 @@ export default async function Guesthouses() {
               />
             </div>
             <div className='px-2 lg:px-4 pb-6'>
-              <h6 className='text-sm lg:text-base body-font  text-center my-4'>
+              <h6 className='text-sm lg:text-base body-font  text-center my-4 text-zinc-500 dark:text-zinc-300'>
                 {guesthouse.title}
               </h6>
-              <p className='text-xs  body-font'>{guesthouse.summary}</p>
+              <p className='text-xs text-zinc-500 dark:text-zinc-300 body-font'>
+                {guesthouse.summary}
+              </p>
             </div>
           </div>
         ))}
