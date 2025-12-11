@@ -1,14 +1,12 @@
 import { client } from "@/sanity/lib/client";
-import React from "react";
 import HeroSection from "./components/HeroSection";
 import Accordions from "./components/Accordions";
-import { PortableText } from "next-sanity";
-import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
+
 import AboutusHome from "./components/AboutusHome";
 import Motion from "./components/Motion";
-import Guesthouses from "./components/Guesthouses";
+
 import Cafe from "./components/Cafe";
+import EventSlider from "./components/EventSlider";
 
 async function getHeroData() {
   const query = `*[_type == "hero"]{
@@ -35,10 +33,21 @@ async function getAboutusData() {
   return data;
 }
 
+async function getGuesthouses() {
+  const query = `*[_type == "guesthouses"] | order(id asc){
+    coverImage,
+    title,
+    slug
+  }`;
+  const data = client.fetch(query, {}, { next: { revalidate: 60 } });
+  return data;
+}
+
 export default async function Home() {
   const heroData = await getHeroData();
   const accordionData = await accordionsData();
   const aboutus = await getAboutusData();
+  const guesthousesData = await getGuesthouses();
 
   return (
     <div className='dark:bg-black'>
@@ -49,12 +58,16 @@ export default async function Home() {
             <AboutusHome aboutus={aboutus} />
           </Motion>
         </div>
-        <div className='mt-12 lg:mt-24'>
+
+        <div className='mt-12 lg:mt-32'>
           <Motion>
-            <Guesthouses />
+            <h2 className='text-2xl lg:text-4xl body-font text-center text-zinc-500 dark:text-zinc-300'>
+              Guesthouses
+            </h2>
+            <EventSlider data={guesthousesData} />
           </Motion>
         </div>
-        <div className='mt-12 lg:mt-24'>
+        <div className='my-12 lg:my-24'>
           <Motion>
             <Cafe />
           </Motion>

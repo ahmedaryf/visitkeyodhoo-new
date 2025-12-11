@@ -19,6 +19,12 @@ export const guesthouses = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "id",
+      title: "ID",
+      type: "number",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: "coverImage",
       title: "Cover Image",
       type: "image",
