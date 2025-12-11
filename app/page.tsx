@@ -7,6 +7,7 @@ import Motion from "./components/Motion";
 
 import Cafe from "./components/Cafe";
 import EventSlider from "./components/EventSlider";
+import SignatureComponent from "./components/SignatureComponent";
 
 async function getHeroData() {
   const query = `*[_type == "hero"]{
