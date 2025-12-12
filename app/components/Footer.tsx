@@ -32,9 +32,9 @@ export default async function Footer() {
           </Link>
         </div>
         <div className='mt-12 md:mt-0'>
-          <h1 className='text-xl font-bold mb-2 md:mb-4 tracking-wider'>
+          {/* <h1 className='text-xl font-bold mb-2 md:mb-4 tracking-wider'>
             Contact us
-          </h1>
+          </h1> */}
           <div className='flex flex-col gap-2'>
             {/* <div className='flex gap-2 items-center mb-2'>
               <FaPhone size={20} />

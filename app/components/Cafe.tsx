@@ -19,7 +19,7 @@ export default async function Cafe() {
   const cafeData = await getCafeData();
 
   return (
-    <div className='min-h-screen'>
+    <div className=''>
       <h2 className='text-2xl lg:text-4xl body-font text-center mb-6 lg:mb-12 text-zinc-500 dark:text-zinc-300'>
         Café & Restaurants
       </h2>
