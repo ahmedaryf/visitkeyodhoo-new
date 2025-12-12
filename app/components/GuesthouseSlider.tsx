@@ -11,7 +11,7 @@ import "swiper/css/effect-fade";
 import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
 
-export default function EventSlider({ data }: { data: any }) {
+export default function GuesthouseSlider({ data }: { data: any }) {
   const display = data.slice(0, 4);
   return (
     <div className=' overflow-hidden  py-12'>

@@ -6,7 +6,8 @@ import AboutusHome from "./components/AboutusHome";
 import Motion from "./components/Motion";
 
 import Cafe from "./components/Cafe";
-import EventSlider from "./components/EventSlider";
+import GuesthouseSlider from "./components/GuesthouseSlider";
+
 // import SignatureComponent from "./components/SignatureComponent";
 
 async function getHeroData() {
@@ -65,7 +66,7 @@ export default async function Home() {
             <h2 className='text-2xl lg:text-4xl body-font text-center text-zinc-500 dark:text-zinc-300'>
               Guesthouses
             </h2>
-            <EventSlider data={guesthousesData} />
+            <GuesthouseSlider data={guesthousesData} />
           </Motion>
         </div>
         <div className='my-12 lg:my-24'>
