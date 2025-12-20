@@ -14,9 +14,9 @@ export default async function page() {
   const menuItems = await getMenuItems();
 
   return (
-    <div className=' w-full min-h-screen xl:w-[60vw] mx-auto  '>
-      <div className='pt-20 lg:pt-32 bg-zinc-900'></div>
-      <div className='bg-zinc-900 min-h-screen pt-12 px-2'>
+    <div className=' w-full min-h-screen xl:w-[60vw] mx-auto  lg:mb-12'>
+      <div className='pt-20 lg:pt-32 bg-zinc-900 lg:bg-white'></div>
+      <div className='bg-zinc-900 min-h-screen pt-12 px-2 pb-12'>
         <h1 className='text-3xl lg:text-6xl text-center font-bold body-font lg:pt-12 text-zinc-100'>
           RockNReel Menu
         </h1>

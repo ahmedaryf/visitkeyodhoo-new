@@ -120,8 +120,8 @@ export default function MyDialog({
 
                 <motion.div
                   variants={linkVars}
-                  className='mx-auto p-6 md:p-8 w-full md:w-[80vw] menu-shadow rounded'>
-                  <div className=' h-[70vh] overflow-y-scroll flex flex-col gap-6'>
+                  className='mx-auto p-6 md:p-8 w-full md:w-[80vw] lg:w-[60vw] rounded'>
+                  <div className=' h-[70vh] overflow-y-scroll flex flex-col gap-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden'>
                     {children}
                   </div>
                 </motion.div>
