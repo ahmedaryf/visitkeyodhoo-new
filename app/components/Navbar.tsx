@@ -101,7 +101,7 @@ export default function Navbar() {
 
   return (
     <>
-      {!path.startsWith("/admin") ? (
+      {!path.startsWith("/admin") && !path.startsWith("/rocknreel") ? (
         <nav
           className={`duration-500 px-2 py-2 md:py-3 md:px-0 
             w-screen z-50 fixed`}>
