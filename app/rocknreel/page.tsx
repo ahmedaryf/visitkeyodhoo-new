@@ -43,12 +43,12 @@ export default async function page() {
                         </div>
                         <div className='flex flex-col justify-between w-full h-full pb-1 pt-4 pe-2'>
                           <div className=''>
-                            <h6 className='text-zinc-200 body-font text-sm'>
+                            <h6 className='text-zinc-200 text-center body-font text-sm'>
                               {menuItem.itemName}
                             </h6>
                           </div>
 
-                          <div className='flex gap-6   w-full pe-4                                                                  '>
+                          <div className='flex justify-center gap-6 w-full pe-4                                                                  '>
                             <h6 className='text-zinc-400 body-font text-[0.6rem]'>
                               MVR {menuItem.priceInMvr}
                             </h6>
