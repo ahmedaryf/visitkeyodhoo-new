@@ -3,6 +3,7 @@ import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import React from "react";
 import MyDialog from "../components/MyDialog";
+import RockNReelLogo from "../components/RockNReelLogo";
 
 async function getMenuItems() {
   const query = `*[_type == "rocknreelmenu"]`;
@@ -15,13 +16,18 @@ export default async function page() {
 
   return (
     <div className='  bg-zinc-900 '>
-      <div className='pt-8 lg:pt-12 bg-zinc-900'></div>
-      <div className='bg-zinc-900 pt-12 px-2 pb-12 w-full min-h-screen xl:w-[60vw] mx-auto'>
-        <h1 className='text-3xl lg:text-6xl text-center font-bold body-font lg:pt-12 text-zinc-100'>
-          RockNReel Menu
+      <div className='border-b border-zinc-700'>
+        <div className='flex justify-center items-center'>
+          <RockNReelLogo />
+        </div>
+      </div>
+      {/* <div className='h-12 bg-linear-to-b from-white to-zinc-900 '></div> */}
+      <div className='bg-zinc-900 px-2 pb-12 w-full min-h-screen xl:w-[60vw] mx-auto'>
+        <h1 className='text-3xl pt-6 lg:text-6xl text-center font-bold body-font lg:pt-12 text-zinc-100'>
+          Menu
         </h1>
 
-        <div className=' grid grid-cols-2 lg:grid-cols-4 gap-3 mt-12'>
+        <div className=' grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6'>
           {menuItems.map((item: any, index: any) => (
             <div key={index} className=''>
               <MyDialog data={item}>
