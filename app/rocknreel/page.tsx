@@ -55,10 +55,10 @@ export default async function page() {
                           </div>
 
                           <div className='flex justify-center gap-6 w-full pe-4                                                                  '>
-                            <h6 className='text-zinc-400 body-font text-[0.6rem]'>
+                            <h6 className='text-zinc-300 body-font text-[0.7rem]'>
                               MVR {menuItem.priceInMvr}
                             </h6>
-                            <h6 className='text-zinc-400 body-font text-[0.6rem]'>
+                            <h6 className='text-zinc-300 body-font text-[0.7rem]'>
                               USD {menuItem.priceInUsd}
                             </h6>
                           </div>
@@ -73,7 +73,7 @@ export default async function page() {
         </div>
       </div>
       <div className='border-t border-zinc-700 h-64'>
-        <div className='p-4 text-zinc-200 text-center body-font text-xs'>
+        <div className='p-4 text-zinc-200 text-center body-font text-sm'>
           <h6>Phone: +960 7875519</h6>
         </div>
       </div>

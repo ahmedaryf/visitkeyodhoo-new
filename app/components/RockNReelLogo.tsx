@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "motion/react";
+import { delay, motion } from "motion/react";
 
 export default function RockNReelLogo() {
   const container = {
@@ -9,6 +9,7 @@ export default function RockNReelLogo() {
       opacity: 1,
 
       transition: {
+        delay: 0.1,
         staggerChildren: 0.1,
       },
     },
