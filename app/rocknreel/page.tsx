@@ -72,8 +72,11 @@ export default async function page() {
           ))}
         </div>
       </div>
+      <div className='border-t border-zinc-700 h-64'>
+        <div className='p-4 text-zinc-200 text-center body-font text-xs'>
+          <h6>Phone: +960 7875519</h6>
+        </div>
+      </div>
     </div>
   );
 }
-
-<div className=' '></div>;
