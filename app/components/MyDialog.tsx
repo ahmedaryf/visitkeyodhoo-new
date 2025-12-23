@@ -77,13 +77,15 @@ export default function MyDialog({
             className=' cursor-pointer rounded overflow-hidden'>
             <div className=' flex flex-col gap-4 items-center bg-white/10 rounded-md p-2 border border-white/20'>
               <div className=''>
-                <Image
-                  src={urlFor(data.coverImage)}
-                  width={400}
-                  height={400}
-                  alt='Item Image'
-                  className=' rounded-md aspect-4/3 object-cover'
-                />
+                {data.coverImage && (
+                  <Image
+                    src={urlFor(data.coverImage)}
+                    width={400}
+                    height={400}
+                    alt='Item Image'
+                    className=' rounded-md aspect-4/3 object-cover'
+                  />
+                )}
               </div>
               <div className=''>
                 <h6 className='text-zinc-200  text-sm body-font font-bold'>
