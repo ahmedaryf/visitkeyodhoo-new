@@ -11,6 +11,7 @@ async function getMenuItems() {
     categories,
     items[]{
       itemName,
+      itemDescription,
       itemImage,
       priceInMvr,
       priceInUsd
@@ -55,14 +56,19 @@ export default async function page() {
                                 width={400}
                                 height={400}
                                 alt='Image'
-                                className='w-28 aspect-4/4 object-cover rounded-md'
+                                className='w-32 aspect-4/4 object-cover rounded-md'
                               />
                             )}
                           </div>
-                          <div className='flex flex-col justify-between w-full h-full pb-1 pt-4 pe-2'>
+                          <div className='flex flex-col justify-between w-full h-full pb-1 pt-2 pe-2'>
                             <div className=''>
                               <h6 className='text-zinc-200 body-font text-sm'>
                                 {menuItem.itemName}
+                              </h6>
+                            </div>
+                            <div className=''>
+                              <h6 className='text-zinc-400 body-font text-xs'>
+                                {menuItem.itemDescription}
                               </h6>
                             </div>
 
