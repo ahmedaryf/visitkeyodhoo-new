@@ -4,6 +4,7 @@ import React from "react";
 
 import RockNReelLogo from "../components/RockNReelLogo";
 import MenuComponentRnR from "./MenuComponentRnR";
+import Favourites from "./Favourites";
 
 async function getMenuItems() {
   const query = `*[_type == "rocknreelmenu"] | order(id asc){
@@ -25,6 +26,10 @@ async function getMenuItems() {
 export default async function page() {
   const menuItems = await getMenuItems();
 
+  const itemList = menuItems.map((item: any) => {
+    return item.items;
+  });
+
   return (
     <div className='  bg-zinc-900 '>
       <div className='border-b border-zinc-700'>
@@ -34,7 +39,12 @@ export default async function page() {
       </div>
       {/* <div className='h-12 bg-linear-to-b from-white to-zinc-900 '></div> */}
       <div className='bg-zinc-900 px-2 pb-12 w-full min-h-screen xl:w-[60vw] mx-auto'>
-        <h1 className='text-3xl pt-6 lg:text-6xl text-center font-bold body-font lg:pt-12 text-zinc-100'>
+        <div className='flex justify-end-safe mt-4 me-1'>
+          <div className=''>
+            <Favourites menu={itemList} />
+          </div>
+        </div>
+        <h1 className='text-3xl lg:text-6xl text-center font-bold body-font lg:pt-12 text-zinc-100'>
           Menu
         </h1>
         <div>

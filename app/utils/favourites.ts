@@ -18,6 +18,9 @@ export function toggleFavourites(id: string) {
     : [...favs, id];
 
   localStorage.setItem(FAV_KEY, JSON.stringify(update));
+
+  // notify same tab
+  window.dispatchEvent(new Event("favourites-updated"));
 }
 
 export function isFavourite(id: string): boolean {
