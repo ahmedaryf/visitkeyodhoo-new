@@ -81,7 +81,7 @@ export default function Favourites({ menu }: { menu: any }) {
             {favouriteItems.map((favItems: any, index: number) => {
               return (
                 <div key={index}>
-                  <div className='flex items-center gap-6 bg-white/5 rounded-md border border-white/10'>
+                  <div className='flex gap-6 bg-white/5 rounded-md border border-white/10'>
                     <Image
                       src={urlFor(favItems.itemImage)}
                       width={200}
@@ -89,10 +89,18 @@ export default function Favourites({ menu }: { menu: any }) {
                       alt='Item Image'
                       className='w-18 aspect-4/4 object-cover rounded-md'
                     />
-                    <div className='p-2'>
+                    <div className='p-2 flex flex-col justify-between '>
                       <h6 className='text-sm text-zinc-200 body-font'>
                         {favItems.itemName}
                       </h6>
+                      <div className=' flex gap-6'>
+                        <h6 className='text-xs text-zinc-400 body-font'>
+                          MVR {favItems.priceInMvr}
+                        </h6>
+                        <h6 className='text-xs text-zinc-400 body-font'>
+                          MVR {favItems.priceInUsd}
+                        </h6>
+                      </div>
                     </div>
                   </div>
                   <div className='flex justify-end-safe mt-1'>

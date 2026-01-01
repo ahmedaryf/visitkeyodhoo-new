@@ -10,6 +10,16 @@ export default function MenuComponentRnR({ menuItems }: { menuItems: any }) {
 
   useEffect(() => {
     setFavs(getFavourites());
+
+    const syncFavs = () => setFavs(getFavourites());
+
+    window.addEventListener("favourites-updated", syncFavs);
+    window.addEventListener("storage", syncFavs);
+
+    return () => {
+      window.removeEventListener("favourites-updated", syncFavs);
+      window.removeEventListener("storage", syncFavs);
+    };
   }, []);
 
   return (
