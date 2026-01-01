@@ -98,7 +98,7 @@ export default function Favourites({ menu }: { menu: any }) {
                           MVR {favItems.priceInMvr}
                         </h6>
                         <h6 className='text-xs text-zinc-400 body-font'>
-                          MVR {favItems.priceInUsd}
+                          USD {favItems.priceInUsd}
                         </h6>
                       </div>
                     </div>
