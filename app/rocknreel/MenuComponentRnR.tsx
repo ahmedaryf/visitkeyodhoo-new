@@ -6,10 +6,13 @@ import { urlFor } from "@/sanity/lib/image";
 import { getFavourites, toggleFavourites } from "../utils/favourites";
 
 export default function MenuComponentRnR({ menuItems }: { menuItems: any }) {
-  const [favs, setFavs] = useState<string[]>([]);
+  // old one
+  // const [favs, setFavs] = useState<string[]>([]);
+  const [favs, setFavs] = useState(() => getFavourites());
 
   useEffect(() => {
-    setFavs(getFavourites());
+    // this not needed with new usestate
+    // setFavs(getFavourites());
 
     const syncFavs = () => setFavs(getFavourites());
 
@@ -55,7 +58,7 @@ export default function MenuComponentRnR({ menuItems }: { menuItems: any }) {
                         <div className='flex flex-col justify-between w-full h-full pb-1 pt-2 pe-2'>
                           <div className='flex justify-between gap-4'>
                             <h6 className='text-zinc-200 body-font text-sm'>
-                              {menuItem.itemName}
+                              {menuItem.itemname}
                             </h6>
                             <button
                               onClick={handleToggle}

@@ -6,7 +6,8 @@ import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 
 export default function Favourites({ menu }: { menu: any }) {
-  const [favs, setFavs] = useState<string[]>([]);
+  // const [favs, setFavs] = useState<string[]>([]);
+  const [favs, setFavs] = useState(() => getFavourites());
 
   //   function clearStorage() {
   //     if (typeof window === "undefined") return;
@@ -31,9 +32,10 @@ export default function Favourites({ menu }: { menu: any }) {
     window.dispatchEvent(new Event("favourites-updated"));
   }
 
-  useEffect(() => {
-    setFavs(getFavourites());
-  }, []);
+  //This doesn't need with the new usestate
+  // useEffect(() => {
+  //   setFavs(getFavourites());
+  // }, []);
 
   useEffect(() => {
     const handleStorage = (e: StorageEvent) => {

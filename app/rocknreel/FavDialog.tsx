@@ -2,8 +2,7 @@
 import React, { ReactNode, useState } from "react";
 import { MdClose } from "react-icons/md";
 import { AnimatePresence, motion } from "motion/react";
-import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
+
 import Motion from "../components/Motion";
 import { BsBookmarkHeart } from "react-icons/bs";
 

@@ -5,6 +5,7 @@ import React from "react";
 import RockNReelLogo from "../components/RockNReelLogo";
 import MenuComponentRnR from "./MenuComponentRnR";
 import Favourites from "./Favourites";
+import Link from "next/link";
 
 async function getMenuItems() {
   const query = `*[_type == "rocknreelmenu"] | order(id asc){
@@ -51,9 +52,17 @@ export default async function page() {
           <MenuComponentRnR menuItems={menuItems} />
         </div>
       </div>
-      <div className='border-t border-zinc-700 h-64'>
-        <div className='p-4 text-zinc-200 text-center body-font text-sm'>
+      <div className='border-t border-zinc-700 h-64 flex flex-col justify-between items-center'>
+        <div className='pt-4 text-zinc-200 body-font text-sm'>
           <h6>Phone: +960 7875519</h6>
+        </div>
+        <div className='flex gap-1 mb-6'>
+          <h6 className='text-zinc-400 body-font text-xs'>Powered by</h6>
+          <Link
+            className='text-zinc-400 body-font text-xs underline underline-offset-2'
+            href={"/"}>
+            visitkeyodhoo
+          </Link>
         </div>
       </div>
     </div>
