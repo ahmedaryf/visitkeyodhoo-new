@@ -2,14 +2,15 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 
-import MenuComponent from "./MenuComponent";
+import Link from "next/link";
 
 async function getCafeData() {
   const query = `*[_type == "cafe"] | order(propId asc){
     title,
     menu,
     coverImage,
-    logo
+    logo,
+    link
   }`;
   const data = await client.fetch(query, {}, { next: { revalidate: 60 } });
   return data;
@@ -47,7 +48,16 @@ export default async function Cafe() {
                       {cafe.title}
                     </h6>
                   </div>
-                  <div className='flex p-4 justify-center'>
+                  {cafe.link && (
+                    <div className='p-4 w-full flex justify-center items-center'>
+                      <Link
+                        href={cafe.link}
+                        className='py-1 outline w-full text-center rounded-xl text-xs text-zinc-500 hover:text-zinc-800 cursor-pointer'>
+                        View Menu
+                      </Link>
+                    </div>
+                  )}
+                  {/* <div className='flex p-4 justify-center'>
                     {cafe.menu && (
                       <MenuComponent>
                         <h5 className='text-center body-font text-lg text-zinc-500 dark:text-zinc-300'>
@@ -79,7 +89,7 @@ export default async function Cafe() {
                         </div>
                       </MenuComponent>
                     )}
-                  </div>
+                  </div> */}
                 </div>
               )
           )}

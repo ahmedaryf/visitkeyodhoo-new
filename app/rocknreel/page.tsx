@@ -56,13 +56,18 @@ export default async function page() {
         <div className='pt-4 text-zinc-200 body-font text-sm'>
           <h6>Phone: +960 7875519</h6>
         </div>
-        <div className='flex gap-1 mb-6'>
-          <h6 className='text-zinc-400 body-font text-xs'>Powered by</h6>
-          <Link
-            className='text-zinc-400 body-font text-xs underline underline-offset-2'
-            href={"/"}>
-            visitkeyodhoo
-          </Link>
+        <div>
+          <div className='flex gap-1 mb-1'>
+            <h6 className='text-zinc-400 body-font text-xs'>Powered by</h6>
+            <Link
+              className='text-zinc-400 body-font text-xs underline underline-offset-2'
+              href={"/"}>
+              visitkeyodhoo
+            </Link>
+          </div>
+          <h6 className='text-zinc-600 body-font text-xs mb-6'>
+            Developed by Ahmed Areef
+          </h6>
         </div>
       </div>
     </div>

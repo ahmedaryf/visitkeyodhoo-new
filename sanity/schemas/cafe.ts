@@ -76,5 +76,10 @@ export const cafe = defineType({
         },
       ],
     }),
+    defineField({
+      name: "link",
+      title: "Link",
+      type: "string",
+    }),
   ],
 });
