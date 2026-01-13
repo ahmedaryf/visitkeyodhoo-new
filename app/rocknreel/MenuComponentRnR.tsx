@@ -9,6 +9,7 @@ export default function MenuComponentRnR({ menuItems }: { menuItems: any }) {
   // old one
   // const [favs, setFavs] = useState<string[]>([]);
   const [favs, setFavs] = useState(() => getFavourites());
+  console.log(menuItems[0].items[0].itemName);
 
   useEffect(() => {
     // this not needed with new usestate
@@ -58,7 +59,7 @@ export default function MenuComponentRnR({ menuItems }: { menuItems: any }) {
                         <div className='flex flex-col justify-between w-full h-full pb-1 pt-2 pe-2'>
                           <div className='flex justify-between gap-4'>
                             <h6 className='text-zinc-200 body-font text-sm'>
-                              {menuItem.itemname}
+                              {menuItem.itemName}
                             </h6>
                             <button
                               onClick={handleToggle}
